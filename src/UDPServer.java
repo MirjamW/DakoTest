@@ -16,7 +16,7 @@ public class UDPServer {
 		while(true){
 			DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length); // TODO missing part
 					
-			// kommentare einfügen --> wann passiert was?
+			// Kommentare einfügen --> wann passiert was?
 			
 					serverSocket.receive(receivePacket);
 			
