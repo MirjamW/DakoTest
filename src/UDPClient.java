@@ -13,12 +13,12 @@ public class UDPClient {
 		BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 		
 		DatagramSocket clientSocket = new DatagramSocket();
-		// hier wird kein port übergeben -> jvm sucht sich hier einen aus
-		// port übergeben ist nur auf der Serverseite wichtig
+		// Hier wird kein Port übergeben -> jvm sucht sich hier einen Port aus
+		// Port übergeben ist nur auf der Serverseite wichtig
 		
 		InetAddress IPAddress = InetAddress.getByName("localhost");
 		//127.0.0.1 -> auf die IP-Adresse wird das geschickt    (= "loopback interface")
-		//Wenn alles auf einem pc ist kommt alles über diese adresse rein und geht auch raus
+		//Wenn alles auf einem PC ist, kommt alles über diese Adresse rein und geht auch raus
 		
 		
 		byte[] sendData = new byte[1024];
@@ -50,7 +50,5 @@ public class UDPClient {
 		clientSocket.close();
 		// rein theoretisch schließt die JVM den selbst.. aber man sollte sich selbst darum kümmern dass 
 		// sockets auch immer wieder geschlossen werden
-
 	}
-
 }

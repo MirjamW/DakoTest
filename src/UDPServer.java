@@ -31,14 +31,9 @@ public class UDPServer {
 					sendData = capitalizedSentence.getBytes();
 					
 					DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, IPAdress, port); 
-							
 					
 					serverSocket.send(sendPacket);
-							
-					
-					
+									
 		}
-		
 	}
-	
 }
